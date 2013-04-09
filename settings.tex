@@ -1,0 +1,78 @@
+% Change ALL the settings!
+
+% This is gonna grow over time and I'll forget what all these things even mean.
+
+\documentclass[english,a4paper,12pt,twoside,titlepage,openright]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}  % For european-style <<quoting>>
+%\usepackage{palatino}
+\usepackage{babel}
+\usepackage{a4}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{siunitx}
+
+% Handle URLs correctly
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{soul}
+\usepackage{amssymb}
+
+\usepackage{enumerate}
+
+\usepackage[capitalise]{cleveref}       % For references like \cref{fig1,fig2,fig3} => Fig.~1-3
+\newcommand{\crefrangeconjunction}{--}
+
+\pagestyle{headings}
+
+\usepackage{color}
+\definecolor{mandarine}{RGB}{255,128,0}
+\definecolor{flore}{RGB}{69,171,71}
+\definecolor{banane}{RGB}{180,180,74}
+\definecolor{gray}{RGB}{144,146,142}
+
+% For listings
+% Taken and modified from http://stackoverflow.com/questions/741985/latex-source-code-listing-like-in-professional-books
+
+\usepackage{listings}
+\usepackage{courier}
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    %stepnumber=5,
+    numbersep=10pt,
+    tabsize=4,
+    extendedchars=true,
+    breaklines=true,
+    keywordstyle=\color{blue}\bf\ttfamily,
+    frame=b,
+    stringstyle=\color{white}\ttfamily,
+    showspaces=false,
+    showtabs=false,
+    xleftmargin=17pt,
+    framexleftmargin=17pt,
+    framexrightmargin=5pt,
+    framexbottommargin=4pt,
+    %backgroundcolor=\color{lightgray},
+    showstringspaces=false
+}
+\lstloadlanguages{ % See Documentation for further languages
+    C
+    %C++
+}
+% Command for having the right-aligned things in code.
+\newcommand{\AlgoCond}[2]{\hfill\makebox[4.0cm][l]{\color{gray}\ttfamily(if b in #1..#2)}}
+
+\usepackage{caption}
+%\DeclareCaptionFont{blue}{\color{blue}} 
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+%\captionsetup[lstlisting]{singlelinecheck=false, labelfont={blue}, textfont={blue}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+

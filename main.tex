@@ -1,0 +1,42 @@
+
+% You'll probably want to completely change this file.
+\input{settings}
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+
+\include{title}
+
+\tableofcontents
+
+% No paragraph indentation but more space inbetween. Put right after the TOC because it also
+% influences the line spacing in the TOC.
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex plus 1.0ex minus 0.4ex}
+
+
+% Include all other sections of the document here.
+% \include{conclusions}
+
+% Appendices follow; remove as needed.
+
+% Bibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+% List of figures
+\addcontentsline{toc}{chapter}{List of figures}
+\listoffigures
+
+% List of listings (with lstlisting)
+\addcontentsline{toc}{chapter}{List of listings}
+\renewcommand{\lstlistlistingname}{List of Listings}
+\lstlistoflistings
+
+% List of tables.
+\addcontentsline{toc}{chapter}{List of tables}
+\listoftables
+
+\end{document}
